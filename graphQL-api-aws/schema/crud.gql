@@ -1,0 +1,22 @@
+type valueType {
+  id: String
+  username: String
+}
+
+type Query {
+  FetchallData: [valueType]
+  FetchSingleData: valueType
+}
+
+input val {
+  id: String
+  username: String
+}
+
+type Mutation {
+  addMutation(msg: val): valueType
+  getSpecRowDetail(storeId: String): valueType
+  updateRowDetail(msg: val): String
+  deleteSpecRowDetail(storeId: String): String
+  deleteAll: String
+}
